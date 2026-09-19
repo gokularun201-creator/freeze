@@ -1,0 +1,13 @@
+# Build outputs and temporary caches
+build/
+*.dex
+*.idsig
+*.log
+.gradle/
+.idea/
+*.tmp
+
+# OS files
+Thumbs.db
+Desktop.ini
+.DS_Store

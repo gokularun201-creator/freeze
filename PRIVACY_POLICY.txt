@@ -1,0 +1,45 @@
+PRIVACY POLICY FOR FREEZE AGI
+
+Last Updated: September 12, 2026
+Application: Freeze AGI
+Package Name: com.freeze.assistant
+Developer Contact: support@freezeassistant.com
+
+1. OVERVIEW & COMMITMENT TO PRIVACY
+Freeze AGI ("we", "our", or "the App") is built on a strict privacy-by-design architecture. Freeze AGI processes voice commands and automations locally on your device. We do not require account registration, do not maintain remote cloud user profiles, and do not monetize, rent, or sell your personal data.
+
+2. ANDROID ACCESSIBILITYSERVICE API PROMINENT DISCLOSURE
+In accordance with Google Play Developer Policy, Freeze AGI explicitly discloses that it uses the Android AccessibilityService API strictly to automate touch interactions (such as tapping screen buttons, entering text, and scrolling pages) on your behalf when you issue direct voice or console commands.
+- Freeze AGI NEVER logs, collects, or transmits sensitive user data (passwords, credit card numbers, personal communications, or financial credentials).
+- Screen element hierarchy inspection occurs strictly in volatile device memory and is immediately released once the action completes.
+- You can enable or disable the Accessibility Service at any time via Android System Settings.
+
+3. AUDIO RECORDING & MICROPHONE USAGE (RECORD_AUDIO)
+Freeze AGI uses the RECORD_AUDIO permission strictly to capture spoken voice commands when you tap the voice button or use hands-free wake word detection ("Hey Freeze").
+- Hands-free wake word spotting is handled 100% locally and offline on your device using a bundled Kaldi acoustic model. Audio is not transmitted to cloud servers while waiting for wake prompts.
+- Visual indicators in the status bar and the on-screen glowing Voice Orb clearly indicate when the microphone is listening.
+
+4. CLOUD AI & GOOGLE GEMINI API INTEGRATION
+When you use conversational reasoning or web knowledge queries, Freeze AGI connects directly over an encrypted TLS 1.3 / HTTPS link to Google's official Gemini API servers using your provided personal API key (Bring Your Own Key model). No intermediary proxy server intercepts your prompts. Your API key is stored securely in encrypted private device storage.
+
+5. PHONE STATE & CONTACTS PERMISSIONS (READ_PHONE_STATE, READ_CONTACTS)
+Phone state and contacts permissions are accessed on-demand exclusively to identify incoming callers for hands-free voice answering or declining, and to initiate voice calls upon your explicit command ("Call [Contact]"). Phone audio is never recorded, and your contacts are never uploaded to remote servers.
+
+6. CAMERA PERMISSION (CAMERA)
+Camera hardware access is utilized strictly to toggle the device flashlight upon spoken request ("turn on flashlight"). Freeze AGI does not capture background photos, videos, or optical surveillance.
+
+7. FLOATING OVERLAY & FOREGROUND SERVICES
+Display Over Other Apps (SYSTEM_ALERT_WINDOW) allows the floating assistant bubble to appear above other apps when invoked. A persistent Android notification is shown whenever background listening or overlay services are active, providing immediate status visibility and a one-tap stop button.
+
+8. DATA RETENTION & DELETION POLICY
+Because Freeze AGI does not maintain cloud accounts or remote servers, all your data lives strictly on your device:
+- You can permanently erase all local settings, preferences, custom voice configurations, and logs at any time via Android Settings > Apps > Freeze AGI > Storage > Clear Storage / Clear Data.
+- Uninstalling the app permanently deletes 100% of stored app files and preferences.
+
+9. THIRD-PARTY TRACKING & ADVERTISEMENTS
+Freeze AGI contains zero third-party advertising SDKs, cross-app tracking libraries, or data analytics brokers.
+
+10. CONTACT INFORMATION
+For privacy questions, feedback, or compliance inquiries, contact us at:
+support@freezeassistant.com
+Freeze AGI (Package: com.freeze.assistant)

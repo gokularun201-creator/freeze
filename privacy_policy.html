@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Freeze AGI</title>
+    <style>
+        :root {
+            --bg-primary: #0A0E17;
+            --bg-card: #131C2E;
+            --cyan-accent: #00E5FF;
+            --emerald-accent: #00E676;
+            --text-primary: #FFFFFF;
+            --text-secondary: #94A3B8;
+            --border-glow: rgba(0, 229, 255, 0.25);
+        }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.65;
+            padding: 24px 16px;
+        }
+        .container {
+            max-width: 820px;
+            margin: 0 auto;
+        }
+        header {
+            text-align: center;
+            padding: 40px 0 24px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            margin-bottom: 36px;
+        }
+        .badge {
+            display: inline-block;
+            background: rgba(0, 230, 118, 0.15);
+            color: var(--emerald-accent);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 16px;
+            border: 1px solid rgba(0, 230, 118, 0.3);
+        }
+        h1 {
+            font-size: 2.4rem;
+            font-weight: 800;
+            color: #FFFFFF;
+            margin-bottom: 8px;
+            letter-spacing: -0.5px;
+        }
+        h1 span {
+            color: var(--cyan-accent);
+        }
+        .meta {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+        .card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-glow);
+            border-radius: 16px;
+            padding: 24px 28px;
+            margin-bottom: 24px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+        }
+        h2 {
+            font-size: 1.3rem;
+            color: var(--cyan-accent);
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        p {
+            color: var(--text-secondary);
+            margin-bottom: 12px;
+            font-size: 0.98rem;
+        }
+        p strong {
+            color: var(--text-primary);
+        }
+        ul {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 12px;
+        }
+        li {
+            color: var(--text-secondary);
+            margin-bottom: 8px;
+            position: relative;
+            padding-left: 20px;
+            font-size: 0.95rem;
+        }
+        li::before {
+            content: "•";
+            position: absolute;
+            left: 4px;
+            color: var(--cyan-accent);
+            font-weight: bold;
+        }
+        .highlight-box {
+            background: rgba(0, 229, 255, 0.08);
+            border-left: 4px solid var(--cyan-accent);
+            padding: 16px;
+            border-radius: 0 8px 8px 0;
+            margin: 16px 0;
+        }
+        .highlight-box p {
+            color: #E2E8F0;
+            margin-bottom: 0;
+        }
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            color: var(--text-secondary);
+            font-size: 0.88rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            margin-top: 48px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="badge">• Google Play Policy Compliant</div>
+            <h1>Freeze <span>AGI</span></h1>
+            <p class="meta">Privacy Policy | Package: <code>com.freeze.assistant</code> | Effective: September 12, 2026</p>
+        </header>
+
+        <div class="card">
+            <h2>1. Overview & Commitment to Privacy</h2>
+            <p>Freeze AGI ("we", "our", or "the App") is built from the ground up with a strict <strong>privacy-by-design</strong> architecture. Freeze AGI is designed to act as an autonomous, hands-free personal voice and automation assistant.</p>
+            <ul>
+                <li><strong>No User Account Required:</strong> Freeze AGI does not require registration, login credentials, or account creation.</li>
+                <li><strong>No Remote Profiling:</strong> We do not operate remote user profile databases or log your personal usage habits.</li>
+                <li><strong>No Data Monetization:</strong> We never sell, rent, trade, or monetize your personal information or automation routines.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>2. Android AccessibilityService API Prominent Disclosure</h2>
+            <div class="highlight-box">
+                <p><strong>Mandatory Play Store Disclosure:</strong> Freeze AGI utilizes the Android <code>AccessibilityService</code> API solely to perform user-requested touch interactions and navigations on your behalf.</p>
+            </div>
+            <p><strong>Specific Purpose:</strong> When you issue explicit spoken voice commands or trigger quick console actions (e.g. <em>"Click Subscribe"</em>, <em>"Scroll down"</em>, <em>"Like this video"</em>, <em>"Accept cookies"</em>, <em>"Go back"</em>), Freeze AGI translates your intent into assistive screen gestures.</p>
+            <ul>
+                <li><strong>Zero Credential Monitoring:</strong> Freeze AGI NEVER captures, reads, logs, or transmits passwords, financial records, credit card numbers, or private chat communications.</li>
+                <li><strong>Ephemeral In-Memory Operation:</strong> UI tree element inspection is executed transiently in volatile device RAM and discarded immediately upon task completion.</li>
+                <li><strong>Revocable Access:</strong> You can enable or disable the Accessibility Service at any moment via <em>Android Settings &gt; Accessibility &gt; Freeze AGI</em>.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>3. Microphone Permission (RECORD_AUDIO)</h2>
+            <p>Freeze AGI requires access to the microphone strictly to transcribe your spoken voice instructions and detect the hands-free wake word.</p>
+            <ul>
+                <li><strong>Offline Wake-Word Detection:</strong> Hands-free wake word spotting (<em>"Hey Freeze"</em>) is handled 100% locally and offline on your device using a bundled Kaldi acoustic model. Audio is not transmitted to cloud servers while waiting for wake prompts.</li>
+                <li><strong>Visual Indicators:</strong> Whenever the microphone is active, both the Android OS system indicator and the on-screen glowing Voice Orb illuminate clearly.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>4. Google Gemini AI Integration (Bring Your Own Key)</h2>
+            <p>For complex conversational knowledge queries, Freeze AGI connects directly to Google's official Gemini API endpoints using your personal API key (Bring Your Own Key model).</p>
+            <ul>
+                <li>Queries are transmitted over direct, end-to-end encrypted TLS 1.3 connections directly to Google.</li>
+                <li>No intermediary proxy servers intercept or inspect your conversational prompts.</li>
+                <li>Your API key is saved locally in private app storage on your device.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>5. Telephony & Contacts Permissions</h2>
+            <p>Access to <code>READ_PHONE_STATE</code> and <code>READ_CONTACTS</code> is used on-demand exclusively for:</p>
+            <ul>
+                <li>Identifying and announcing incoming callers hands-free.</li>
+                <li>Voice dialing when you instruct the assistant: <em>"Call [Contact]"</em>.</li>
+                <li>Call audio is never recorded, and your contact book is never uploaded to remote servers.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>6. Floating Assistant Bubble & Foreground Services</h2>
+            <p>The <code>SYSTEM_ALERT_WINDOW</code> permission enables the compact floating Voice Orb on top of other applications. A persistent system notification is displayed while foreground services run, ensuring complete visibility and providing an instant 1-tap termination control.</p>
+        </div>
+
+        <div class="card">
+            <h2>7. Data Retention & User Deletion Rights</h2>
+            <p>Because all configuration data and history reside strictly on your local device hardware:</p>
+            <ul>
+                <li>You can completely wipe all local settings and history at any time by going to: <em>Android Settings &gt; Apps &gt; Freeze AGI &gt; Storage &gt; Clear Storage</em>.</li>
+                <li>Uninstalling Freeze AGI permanently and irreversibly deletes 100% of stored app files and settings from your device.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>8. Contact & Compliance Inquiries</h2>
+            <p>For privacy questions, feedback, or compliance inquiries, please contact our support team:</p>
+            <p><strong>Email:</strong> <a href="mailto:support@freezeassistant.com" style="color: var(--cyan-accent); text-decoration: none;">support@freezeassistant.com</a><br>
+            <strong>Application:</strong> Freeze AGI (Package: <code>com.freeze.assistant</code>)</p>
+        </div>
+
+        <footer>
+            <p>&copy; 2026 Freeze AGI Development Team. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>

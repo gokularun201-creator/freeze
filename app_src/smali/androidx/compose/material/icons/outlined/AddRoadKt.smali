@@ -1,0 +1,620 @@
+.class public final Landroidx/compose/material/icons/outlined/AddRoadKt;
+.super Ljava/lang/Object;
+.source "AddRoad.kt"
+
+
+# annotations
+.annotation system Ldalvik/annotation/SourceDebugExtension;
+    value = "SMAP\nAddRoad.kt\nKotlin\n*S Kotlin\n*F\n+ 1 AddRoad.kt\nandroidx/compose/material/icons/outlined/AddRoadKt\n+ 2 Icons.kt\nandroidx/compose/material/icons/IconsKt\n+ 3 Dp.kt\nandroidx/compose/ui/unit/DpKt\n+ 4 ImageVector.kt\nandroidx/compose/ui/graphics/vector/ImageVectorKt\n+ 5 Vector.kt\nandroidx/compose/ui/graphics/vector/VectorKt\n*L\n1#1,85:1\n212#2,12:86\n233#2,18:99\n253#2:136\n233#2,18:137\n253#2:174\n233#2,18:175\n253#2:212\n233#2,18:213\n253#2:250\n233#2,18:251\n253#2:288\n233#2,18:289\n253#2:326\n174#3:98\n705#4,2:117\n717#4,2:119\n719#4,11:125\n705#4,2:155\n717#4,2:157\n719#4,11:163\n705#4,2:193\n717#4,2:195\n719#4,11:201\n705#4,2:231\n717#4,2:233\n719#4,11:239\n705#4,2:269\n717#4,2:271\n719#4,11:277\n705#4,2:307\n717#4,2:309\n719#4,11:315\n72#5,4:121\n72#5,4:159\n72#5,4:197\n72#5,4:235\n72#5,4:273\n72#5,4:311\n*S KotlinDebug\n*F\n+ 1 AddRoad.kt\nandroidx/compose/material/icons/outlined/AddRoadKt\n*L\n29#1:86,12\n30#1:99,18\n30#1:136\n45#1:137,18\n45#1:174\n52#1:175,18\n52#1:212\n59#1:213,18\n59#1:250\n66#1:251,18\n66#1:288\n73#1:289,18\n73#1:326\n29#1:98\n30#1:117,2\n30#1:119,2\n30#1:125,11\n45#1:155,2\n45#1:157,2\n45#1:163,11\n52#1:193,2\n52#1:195,2\n52#1:201,11\n59#1:231,2\n59#1:233,2\n59#1:239,11\n66#1:269,2\n66#1:271,2\n66#1:277,11\n73#1:307,2\n73#1:309,2\n73#1:315,11\n30#1:121,4\n45#1:159,4\n52#1:197,4\n59#1:235,4\n66#1:273,4\n73#1:311,4\n*E\n"
+.end annotation
+
+.annotation runtime Lkotlin/Metadata;
+    d1 = {
+        "\u0000\u0010\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0003\"\u0010\u0010\u0000\u001a\u0004\u0018\u00010\u0001X\u0082\u000e\u00a2\u0006\u0002\n\u0000\"\u0015\u0010\u0002\u001a\u00020\u0001*\u00020\u00038F\u00a2\u0006\u0006\u001a\u0004\u0008\u0004\u0010\u0005\u00a8\u0006\u0006"
+    }
+    d2 = {
+        "_addRoad",
+        "Landroidx/compose/ui/graphics/vector/ImageVector;",
+        "AddRoad",
+        "Landroidx/compose/material/icons/Icons$Outlined;",
+        "getAddRoad",
+        "(Landroidx/compose/material/icons/Icons$Outlined;)Landroidx/compose/ui/graphics/vector/ImageVector;",
+        "material-icons-extended_release"
+    }
+    k = 0x2
+    mv = {
+        0x1,
+        0x8,
+        0x0
+    }
+    xi = 0x30
+.end annotation
+
+
+# static fields
+.field private static _addRoad:Landroidx/compose/ui/graphics/vector/ImageVector;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public static final getAddRoad(Landroidx/compose/material/icons/Icons$Outlined;)Landroidx/compose/ui/graphics/vector/ImageVector;
+    .locals 18
+
+    .line 26
+    sget-object v0, Landroidx/compose/material/icons/outlined/AddRoadKt;->_addRoad:Landroidx/compose/ui/graphics/vector/ImageVector;
+
+    if-eqz v0, :cond_0
+
+    .line 27
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
+
+    return-object v0
+
+    .line 90
+    :cond_0
+    new-instance v1, Landroidx/compose/ui/graphics/vector/ImageVector$Builder;
+
+    const/high16 v0, 0x41c00000    # 24.0f
+
+    .line 98
+    invoke-static {v0}, Landroidx/compose/ui/unit/Dp;->constructor-impl(F)F
+
+    move-result v3
+
+    invoke-static {v0}, Landroidx/compose/ui/unit/Dp;->constructor-impl(F)F
+
+    move-result v4
+
+    const/16 v11, 0x60
+
+    const/4 v12, 0x0
+
+    const/4 v10, 0x0
+
+    const/high16 v5, 0x41c00000    # 24.0f
+
+    const/high16 v6, 0x41c00000    # 24.0f
+
+    const-wide/16 v7, 0x0
+
+    const/4 v9, 0x0
+
+    .line 90
+    const-string v2, "Outlined.AddRoad"
+
+    invoke-direct/range {v1 .. v12}, Landroidx/compose/ui/graphics/vector/ImageVector$Builder;-><init>(Ljava/lang/String;FFFFJIZILkotlin/jvm/internal/DefaultConstructorMarker;)V
+
+    .line 102
+    invoke-static {}, Landroidx/compose/ui/graphics/vector/VectorKt;->getDefaultFillType()I
+
+    move-result v3
+
+    .line 109
+    new-instance v0, Landroidx/compose/ui/graphics/SolidColor;
+
+    sget-object v2, Landroidx/compose/ui/graphics/Color;->Companion:Landroidx/compose/ui/graphics/Color$Companion;
+
+    invoke-virtual {v2}, Landroidx/compose/ui/graphics/Color$Companion;->getBlack-0d7_KjU()J
+
+    move-result-wide v4
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v4, v5, v2}, Landroidx/compose/ui/graphics/SolidColor;-><init>(JLkotlin/jvm/internal/DefaultConstructorMarker;)V
+
+    move-object v5, v0
+
+    check-cast v5, Landroidx/compose/ui/graphics/Brush;
+
+    .line 114
+    sget-object v0, Landroidx/compose/ui/graphics/StrokeCap;->Companion:Landroidx/compose/ui/graphics/StrokeCap$Companion;
+
+    invoke-virtual {v0}, Landroidx/compose/ui/graphics/StrokeCap$Companion;->getButt-KaPHkGw()I
+
+    move-result v10
+
+    .line 115
+    sget-object v0, Landroidx/compose/ui/graphics/StrokeJoin;->Companion:Landroidx/compose/ui/graphics/StrokeJoin$Companion;
+
+    invoke-virtual {v0}, Landroidx/compose/ui/graphics/StrokeJoin$Companion;->getBevel-LxFBmk8()I
+
+    move-result v11
+
+    .line 121
+    new-instance v0, Landroidx/compose/ui/graphics/vector/PathBuilder;
+
+    invoke-direct {v0}, Landroidx/compose/ui/graphics/vector/PathBuilder;-><init>()V
+
+    const/high16 v2, 0x41a00000    # 20.0f
+
+    const/high16 v4, 0x41900000    # 18.0f
+
+    .line 31
+    invoke-virtual {v0, v2, v4}, Landroidx/compose/ui/graphics/vector/PathBuilder;->moveTo(FF)Landroidx/compose/ui/graphics/vector/PathBuilder;
+
+    const/high16 v2, -0x3fc00000    # -3.0f
+
+    const/4 v4, 0x0
+
+    .line 32
+    invoke-virtual {v0, v4, v2}, Landroidx/compose/ui/graphics/vector/PathBuilder;->lineToRelative(FF)Landroidx/compose/ui/graphics/vector/PathBuilder;
+
+    const/high16 v2, -0x40000000    # -2.0f
+
+    .line 33
+    invoke-virtual {v0, v2, v4}, Landroidx/compose/ui/graphics/vector/PathBuilder;->lineToRelative(FF)Landroidx/compose/ui/graphics/vector/PathBuilder;
+
+    const/high16 v2, 0x40400000    # 3.0f
+
+    .line 34
+    invoke-virtual {v0, v4, v2}, Landroidx/compose/ui/graphics/vector/PathBuilder;->lineToRelative(FF)Landroidx/compose/ui/graphics/vector/PathBuilder;
+
+    const/high16 v2, -0x3fc00000    # -3.0f
+
+    .line 35
+    invoke-virtual {v0, v2, v4}, Landroidx/compose/ui/graphics/vector/PathBuilder;->lineToRelative(FF)Landroidx/compose/ui/graphics/vector/PathBuilder;
+
+    const/high16 v2, 0x40000000    # 2.0f
+
+    .line 36
+    invoke-virtual {v0, v4, v2}, Landroidx/compose/ui/graphics/vector/PathBuilder;->lineToRelative(FF)Landroidx/compose/ui/graphics/vector/PathBuilder;
+
+    const/high16 v2, 0x40400000    # 3.0f
+
+    .line 37
+    invoke-virtual {v0, v2, v4}, Landroidx/compose/ui/graphics/vector/PathBuilder;->lineToRelative(FF)Landroidx/compose/ui/graphics/vector/PathBuilder;
+
+    .line 38
+    invoke-virtual {v0, v4, v2}, Landroidx/compose/ui/graphics/vector/PathBuilder;->lineToRelative(FF)Landroidx/compose/ui/graphics/vector/PathBuilder;
+
+    const/high16 v2, 0x40000000    # 2.0f
+
+    .line 39
+    invoke-virtual {v0, v2, v4}, Landroidx/compose/ui/graphics/vector/PathBuilder;->lineToRelative(FF)Landroidx/compose/ui/graphics/vector/PathBuilder;
+
+    const/high16 v2, -0x3fc00000    # -3.0f
+
+    .line 40
+    invoke-virtual {v0, v4, v2}, Landroidx/compose/ui/graphics/vector/PathBuilder;->lineToRelative(FF)Landroidx/compose/ui/graphics/vector/PathBuilder;
+
+    const/high16 v2, 0x40400000    # 3.0f
+
+    .line 41
+    invoke-virtual {v0, v2, v4}, Landroidx/compose/ui/graphics/vector/PathBuilder;->lineToRelative(FF)Landroidx/compose/ui/graphics/vector/PathBuilder;
+
+    const/high16 v2, -0x40000000    # -2.0f
+
+    .line 42
+    invoke-virtual {v0, v4, v2}, Landroidx/compose/ui/graphics/vector/PathBuilder;->lineToRelative(FF)Landroidx/compose/ui/graphics/vector/PathBuilder;
+
+    .line 43
+    invoke-virtual {v0}, Landroidx/compose/ui/graphics/vector/PathBuilder;->close()Landroidx/compose/ui/graphics/vector/PathBuilder;
+
+    .line 123
+    invoke-virtual {v0}, Landroidx/compose/ui/graphics/vector/PathBuilder;->getNodes()Ljava/util/List;
+
+    move-result-object v2
+
+    const/16 v16, 0x3800
+
+    const/16 v17, 0x0
+
+    const/high16 v6, 0x3f800000    # 1.0f
+
+    const/high16 v8, 0x3f800000    # 1.0f
+
+    const/4 v7, 0x0
+
+    const/high16 v9, 0x3f800000    # 1.0f
+
+    const/high16 v12, 0x3f800000    # 1.0f
+
+    const/4 v13, 0x0
+
+    const/4 v14, 0x0
+
+    const/4 v15, 0x0
+
+    .line 119
+    const-string v4, ""
+
+    invoke-static/range {v1 .. v17}, Landroidx/compose/ui/graphics/vector/ImageVector$Builder;->addPath-oIyEayM$default(Landroidx/compose/ui/graphics/vector/ImageVector$Builder;Ljava/util/List;ILjava/lang/String;Landroidx/compose/ui/graphics/Brush;FLandroidx/compose/ui/graphics/Brush;FFIIFFFFILjava/lang/Object;)Landroidx/compose/ui/graphics/vector/ImageVector$Builder;
+
+    .line 140
+    invoke-static {}, Landroidx/compose/ui/graphics/vector/VectorKt;->getDefaultFillType()I
+
+    move-result v3
+
+    .line 147
+    new-instance v0, Landroidx/compose/ui/graphics/SolidColor;
+
+    sget-object v2, Landroidx/compose/ui/graphics/Color;->Companion:Landroidx/compose/ui/graphics/Color$Companion;
+
+    invoke-virtual {v2}, Landroidx/compose/ui/graphics/Color$Companion;->getBlack-0d7_KjU()J
+
+    move-result-wide v4
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v4, v5, v2}, Landroidx/compose/ui/graphics/SolidColor;-><init>(JLkotlin/jvm/internal/DefaultConstructorMarker;)V
+
+    move-object v5, v0
+
+    check-cast v5, Landroidx/compose/ui/graphics/Brush;
+
+    .line 152
+    sget-object v0, Landroidx/compose/ui/graphics/StrokeCap;->Companion:Landroidx/compose/ui/graphics/StrokeCap$Companion;
+
+    invoke-virtual {v0}, Landroidx/compose/ui/graphics/StrokeCap$Companion;->getButt-KaPHkGw()I
+
+    move-result v10
+
+    .line 153
+    sget-object v0, Landroidx/compose/ui/graphics/StrokeJoin;->Companion:Landroidx/compose/ui/graphics/StrokeJoin$Companion;
+
+    invoke-virtual {v0}, Landroidx/compose/ui/graphics/StrokeJoin$Companion;->getBevel-LxFBmk8()I
+
+    move-result v11
+
+    .line 159
+    new-instance v0, Landroidx/compose/ui/graphics/vector/PathBuilder;
+
+    invoke-direct {v0}, Landroidx/compose/ui/graphics/vector/PathBuilder;-><init>()V
+
+    const/high16 v2, 0x41900000    # 18.0f
+
+    const/high16 v4, 0x40800000    # 4.0f
+
+    .line 46
+    invoke-virtual {v0, v2, v4}, Landroidx/compose/ui/graphics/vector/PathBuilder;->moveTo(FF)Landroidx/compose/ui/graphics/vector/PathBuilder;
+
+    const/high16 v2, 0x40000000    # 2.0f
+
+    .line 47
+    invoke-virtual {v0, v2}, Landroidx/compose/ui/graphics/vector/PathBuilder;->horizontalLineToRelative(F)Landroidx/compose/ui/graphics/vector/PathBuilder;
+
+    const/high16 v2, 0x41100000    # 9.0f
+
+    .line 48
+    invoke-virtual {v0, v2}, Landroidx/compose/ui/graphics/vector/PathBuilder;->verticalLineToRelative(F)Landroidx/compose/ui/graphics/vector/PathBuilder;
+
+    const/high16 v2, -0x40000000    # -2.0f
+
+    .line 49
+    invoke-virtual {v0, v2}, Landroidx/compose/ui/graphics/vector/PathBuilder;->horizontalLineToRelative(F)Landroidx/compose/ui/graphics/vector/PathBuilder;
+
+    .line 50
+    invoke-virtual {v0}, Landroidx/compose/ui/graphics/vector/PathBuilder;->close()Landroidx/compose/ui/graphics/vector/PathBuilder;
+
+    .line 161
+    invoke-virtual {v0}, Landroidx/compose/ui/graphics/vector/PathBuilder;->getNodes()Ljava/util/List;
+
+    move-result-object v2
+
+    .line 157
+    const-string v4, ""
+
+    invoke-static/range {v1 .. v17}, Landroidx/compose/ui/graphics/vector/ImageVector$Builder;->addPath-oIyEayM$default(Landroidx/compose/ui/graphics/vector/ImageVector$Builder;Ljava/util/List;ILjava/lang/String;Landroidx/compose/ui/graphics/Brush;FLandroidx/compose/ui/graphics/Brush;FFIIFFFFILjava/lang/Object;)Landroidx/compose/ui/graphics/vector/ImageVector$Builder;
+
+    .line 178
+    invoke-static {}, Landroidx/compose/ui/graphics/vector/VectorKt;->getDefaultFillType()I
+
+    move-result v3
+
+    .line 185
+    new-instance v0, Landroidx/compose/ui/graphics/SolidColor;
+
+    sget-object v2, Landroidx/compose/ui/graphics/Color;->Companion:Landroidx/compose/ui/graphics/Color$Companion;
+
+    invoke-virtual {v2}, Landroidx/compose/ui/graphics/Color$Companion;->getBlack-0d7_KjU()J
+
+    move-result-wide v4
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v4, v5, v2}, Landroidx/compose/ui/graphics/SolidColor;-><init>(JLkotlin/jvm/internal/DefaultConstructorMarker;)V
+
+    move-object v5, v0
+
+    check-cast v5, Landroidx/compose/ui/graphics/Brush;
+
+    .line 190
+    sget-object v0, Landroidx/compose/ui/graphics/StrokeCap;->Companion:Landroidx/compose/ui/graphics/StrokeCap$Companion;
+
+    invoke-virtual {v0}, Landroidx/compose/ui/graphics/StrokeCap$Companion;->getButt-KaPHkGw()I
+
+    move-result v10
+
+    .line 191
+    sget-object v0, Landroidx/compose/ui/graphics/StrokeJoin;->Companion:Landroidx/compose/ui/graphics/StrokeJoin$Companion;
+
+    invoke-virtual {v0}, Landroidx/compose/ui/graphics/StrokeJoin$Companion;->getBevel-LxFBmk8()I
+
+    move-result v11
+
+    .line 197
+    new-instance v0, Landroidx/compose/ui/graphics/vector/PathBuilder;
+
+    invoke-direct {v0}, Landroidx/compose/ui/graphics/vector/PathBuilder;-><init>()V
+
+    const/high16 v2, 0x40800000    # 4.0f
+
+    .line 53
+    invoke-virtual {v0, v2, v2}, Landroidx/compose/ui/graphics/vector/PathBuilder;->moveTo(FF)Landroidx/compose/ui/graphics/vector/PathBuilder;
+
+    const/high16 v2, 0x40000000    # 2.0f
+
+    .line 54
+    invoke-virtual {v0, v2}, Landroidx/compose/ui/graphics/vector/PathBuilder;->horizontalLineToRelative(F)Landroidx/compose/ui/graphics/vector/PathBuilder;
+
+    const/high16 v2, 0x41800000    # 16.0f
+
+    .line 55
+    invoke-virtual {v0, v2}, Landroidx/compose/ui/graphics/vector/PathBuilder;->verticalLineToRelative(F)Landroidx/compose/ui/graphics/vector/PathBuilder;
+
+    const/high16 v2, -0x40000000    # -2.0f
+
+    .line 56
+    invoke-virtual {v0, v2}, Landroidx/compose/ui/graphics/vector/PathBuilder;->horizontalLineToRelative(F)Landroidx/compose/ui/graphics/vector/PathBuilder;
+
+    .line 57
+    invoke-virtual {v0}, Landroidx/compose/ui/graphics/vector/PathBuilder;->close()Landroidx/compose/ui/graphics/vector/PathBuilder;
+
+    .line 199
+    invoke-virtual {v0}, Landroidx/compose/ui/graphics/vector/PathBuilder;->getNodes()Ljava/util/List;
+
+    move-result-object v2
+
+    .line 195
+    const-string v4, ""
+
+    invoke-static/range {v1 .. v17}, Landroidx/compose/ui/graphics/vector/ImageVector$Builder;->addPath-oIyEayM$default(Landroidx/compose/ui/graphics/vector/ImageVector$Builder;Ljava/util/List;ILjava/lang/String;Landroidx/compose/ui/graphics/Brush;FLandroidx/compose/ui/graphics/Brush;FFIIFFFFILjava/lang/Object;)Landroidx/compose/ui/graphics/vector/ImageVector$Builder;
+
+    .line 216
+    invoke-static {}, Landroidx/compose/ui/graphics/vector/VectorKt;->getDefaultFillType()I
+
+    move-result v3
+
+    .line 223
+    new-instance v0, Landroidx/compose/ui/graphics/SolidColor;
+
+    sget-object v2, Landroidx/compose/ui/graphics/Color;->Companion:Landroidx/compose/ui/graphics/Color$Companion;
+
+    invoke-virtual {v2}, Landroidx/compose/ui/graphics/Color$Companion;->getBlack-0d7_KjU()J
+
+    move-result-wide v4
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v4, v5, v2}, Landroidx/compose/ui/graphics/SolidColor;-><init>(JLkotlin/jvm/internal/DefaultConstructorMarker;)V
+
+    move-object v5, v0
+
+    check-cast v5, Landroidx/compose/ui/graphics/Brush;
+
+    .line 228
+    sget-object v0, Landroidx/compose/ui/graphics/StrokeCap;->Companion:Landroidx/compose/ui/graphics/StrokeCap$Companion;
+
+    invoke-virtual {v0}, Landroidx/compose/ui/graphics/StrokeCap$Companion;->getButt-KaPHkGw()I
+
+    move-result v10
+
+    .line 229
+    sget-object v0, Landroidx/compose/ui/graphics/StrokeJoin;->Companion:Landroidx/compose/ui/graphics/StrokeJoin$Companion;
+
+    invoke-virtual {v0}, Landroidx/compose/ui/graphics/StrokeJoin$Companion;->getBevel-LxFBmk8()I
+
+    move-result v11
+
+    .line 235
+    new-instance v0, Landroidx/compose/ui/graphics/vector/PathBuilder;
+
+    invoke-direct {v0}, Landroidx/compose/ui/graphics/vector/PathBuilder;-><init>()V
+
+    const/high16 v2, 0x41300000    # 11.0f
+
+    const/high16 v4, 0x40800000    # 4.0f
+
+    .line 60
+    invoke-virtual {v0, v2, v4}, Landroidx/compose/ui/graphics/vector/PathBuilder;->moveTo(FF)Landroidx/compose/ui/graphics/vector/PathBuilder;
+
+    const/high16 v2, 0x40000000    # 2.0f
+
+    .line 61
+    invoke-virtual {v0, v2}, Landroidx/compose/ui/graphics/vector/PathBuilder;->horizontalLineToRelative(F)Landroidx/compose/ui/graphics/vector/PathBuilder;
+
+    const/high16 v2, 0x40800000    # 4.0f
+
+    .line 62
+    invoke-virtual {v0, v2}, Landroidx/compose/ui/graphics/vector/PathBuilder;->verticalLineToRelative(F)Landroidx/compose/ui/graphics/vector/PathBuilder;
+
+    const/high16 v2, -0x40000000    # -2.0f
+
+    .line 63
+    invoke-virtual {v0, v2}, Landroidx/compose/ui/graphics/vector/PathBuilder;->horizontalLineToRelative(F)Landroidx/compose/ui/graphics/vector/PathBuilder;
+
+    .line 64
+    invoke-virtual {v0}, Landroidx/compose/ui/graphics/vector/PathBuilder;->close()Landroidx/compose/ui/graphics/vector/PathBuilder;
+
+    .line 237
+    invoke-virtual {v0}, Landroidx/compose/ui/graphics/vector/PathBuilder;->getNodes()Ljava/util/List;
+
+    move-result-object v2
+
+    .line 233
+    const-string v4, ""
+
+    invoke-static/range {v1 .. v17}, Landroidx/compose/ui/graphics/vector/ImageVector$Builder;->addPath-oIyEayM$default(Landroidx/compose/ui/graphics/vector/ImageVector$Builder;Ljava/util/List;ILjava/lang/String;Landroidx/compose/ui/graphics/Brush;FLandroidx/compose/ui/graphics/Brush;FFIIFFFFILjava/lang/Object;)Landroidx/compose/ui/graphics/vector/ImageVector$Builder;
+
+    .line 254
+    invoke-static {}, Landroidx/compose/ui/graphics/vector/VectorKt;->getDefaultFillType()I
+
+    move-result v3
+
+    .line 261
+    new-instance v0, Landroidx/compose/ui/graphics/SolidColor;
+
+    sget-object v2, Landroidx/compose/ui/graphics/Color;->Companion:Landroidx/compose/ui/graphics/Color$Companion;
+
+    invoke-virtual {v2}, Landroidx/compose/ui/graphics/Color$Companion;->getBlack-0d7_KjU()J
+
+    move-result-wide v4
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v4, v5, v2}, Landroidx/compose/ui/graphics/SolidColor;-><init>(JLkotlin/jvm/internal/DefaultConstructorMarker;)V
+
+    move-object v5, v0
+
+    check-cast v5, Landroidx/compose/ui/graphics/Brush;
+
+    .line 266
+    sget-object v0, Landroidx/compose/ui/graphics/StrokeCap;->Companion:Landroidx/compose/ui/graphics/StrokeCap$Companion;
+
+    invoke-virtual {v0}, Landroidx/compose/ui/graphics/StrokeCap$Companion;->getButt-KaPHkGw()I
+
+    move-result v10
+
+    .line 267
+    sget-object v0, Landroidx/compose/ui/graphics/StrokeJoin;->Companion:Landroidx/compose/ui/graphics/StrokeJoin$Companion;
+
+    invoke-virtual {v0}, Landroidx/compose/ui/graphics/StrokeJoin$Companion;->getBevel-LxFBmk8()I
+
+    move-result v11
+
+    .line 273
+    new-instance v0, Landroidx/compose/ui/graphics/vector/PathBuilder;
+
+    invoke-direct {v0}, Landroidx/compose/ui/graphics/vector/PathBuilder;-><init>()V
+
+    const/high16 v2, 0x41200000    # 10.0f
+
+    const/high16 v4, 0x41300000    # 11.0f
+
+    .line 67
+    invoke-virtual {v0, v4, v2}, Landroidx/compose/ui/graphics/vector/PathBuilder;->moveTo(FF)Landroidx/compose/ui/graphics/vector/PathBuilder;
+
+    const/high16 v2, 0x40000000    # 2.0f
+
+    .line 68
+    invoke-virtual {v0, v2}, Landroidx/compose/ui/graphics/vector/PathBuilder;->horizontalLineToRelative(F)Landroidx/compose/ui/graphics/vector/PathBuilder;
+
+    const/high16 v2, 0x40800000    # 4.0f
+
+    .line 69
+    invoke-virtual {v0, v2}, Landroidx/compose/ui/graphics/vector/PathBuilder;->verticalLineToRelative(F)Landroidx/compose/ui/graphics/vector/PathBuilder;
+
+    const/high16 v2, -0x40000000    # -2.0f
+
+    .line 70
+    invoke-virtual {v0, v2}, Landroidx/compose/ui/graphics/vector/PathBuilder;->horizontalLineToRelative(F)Landroidx/compose/ui/graphics/vector/PathBuilder;
+
+    .line 71
+    invoke-virtual {v0}, Landroidx/compose/ui/graphics/vector/PathBuilder;->close()Landroidx/compose/ui/graphics/vector/PathBuilder;
+
+    .line 275
+    invoke-virtual {v0}, Landroidx/compose/ui/graphics/vector/PathBuilder;->getNodes()Ljava/util/List;
+
+    move-result-object v2
+
+    .line 271
+    const-string v4, ""
+
+    invoke-static/range {v1 .. v17}, Landroidx/compose/ui/graphics/vector/ImageVector$Builder;->addPath-oIyEayM$default(Landroidx/compose/ui/graphics/vector/ImageVector$Builder;Ljava/util/List;ILjava/lang/String;Landroidx/compose/ui/graphics/Brush;FLandroidx/compose/ui/graphics/Brush;FFIIFFFFILjava/lang/Object;)Landroidx/compose/ui/graphics/vector/ImageVector$Builder;
+
+    .line 292
+    invoke-static {}, Landroidx/compose/ui/graphics/vector/VectorKt;->getDefaultFillType()I
+
+    move-result v3
+
+    .line 299
+    new-instance v0, Landroidx/compose/ui/graphics/SolidColor;
+
+    sget-object v2, Landroidx/compose/ui/graphics/Color;->Companion:Landroidx/compose/ui/graphics/Color$Companion;
+
+    invoke-virtual {v2}, Landroidx/compose/ui/graphics/Color$Companion;->getBlack-0d7_KjU()J
+
+    move-result-wide v4
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v4, v5, v2}, Landroidx/compose/ui/graphics/SolidColor;-><init>(JLkotlin/jvm/internal/DefaultConstructorMarker;)V
+
+    move-object v5, v0
+
+    check-cast v5, Landroidx/compose/ui/graphics/Brush;
+
+    .line 304
+    sget-object v0, Landroidx/compose/ui/graphics/StrokeCap;->Companion:Landroidx/compose/ui/graphics/StrokeCap$Companion;
+
+    invoke-virtual {v0}, Landroidx/compose/ui/graphics/StrokeCap$Companion;->getButt-KaPHkGw()I
+
+    move-result v10
+
+    .line 305
+    sget-object v0, Landroidx/compose/ui/graphics/StrokeJoin;->Companion:Landroidx/compose/ui/graphics/StrokeJoin$Companion;
+
+    invoke-virtual {v0}, Landroidx/compose/ui/graphics/StrokeJoin$Companion;->getBevel-LxFBmk8()I
+
+    move-result v11
+
+    .line 311
+    new-instance v0, Landroidx/compose/ui/graphics/vector/PathBuilder;
+
+    invoke-direct {v0}, Landroidx/compose/ui/graphics/vector/PathBuilder;-><init>()V
+
+    const/high16 v2, 0x41800000    # 16.0f
+
+    const/high16 v4, 0x41300000    # 11.0f
+
+    .line 74
+    invoke-virtual {v0, v4, v2}, Landroidx/compose/ui/graphics/vector/PathBuilder;->moveTo(FF)Landroidx/compose/ui/graphics/vector/PathBuilder;
+
+    const/high16 v2, 0x40000000    # 2.0f
+
+    .line 75
+    invoke-virtual {v0, v2}, Landroidx/compose/ui/graphics/vector/PathBuilder;->horizontalLineToRelative(F)Landroidx/compose/ui/graphics/vector/PathBuilder;
+
+    const/high16 v2, 0x40800000    # 4.0f
+
+    .line 76
+    invoke-virtual {v0, v2}, Landroidx/compose/ui/graphics/vector/PathBuilder;->verticalLineToRelative(F)Landroidx/compose/ui/graphics/vector/PathBuilder;
+
+    const/high16 v2, -0x40000000    # -2.0f
+
+    .line 77
+    invoke-virtual {v0, v2}, Landroidx/compose/ui/graphics/vector/PathBuilder;->horizontalLineToRelative(F)Landroidx/compose/ui/graphics/vector/PathBuilder;
+
+    .line 78
+    invoke-virtual {v0}, Landroidx/compose/ui/graphics/vector/PathBuilder;->close()Landroidx/compose/ui/graphics/vector/PathBuilder;
+
+    .line 313
+    invoke-virtual {v0}, Landroidx/compose/ui/graphics/vector/PathBuilder;->getNodes()Ljava/util/List;
+
+    move-result-object v2
+
+    .line 309
+    const-string v4, ""
+
+    invoke-static/range {v1 .. v17}, Landroidx/compose/ui/graphics/vector/ImageVector$Builder;->addPath-oIyEayM$default(Landroidx/compose/ui/graphics/vector/ImageVector$Builder;Ljava/util/List;ILjava/lang/String;Landroidx/compose/ui/graphics/Brush;FLandroidx/compose/ui/graphics/Brush;FFIIFFFFILjava/lang/Object;)Landroidx/compose/ui/graphics/vector/ImageVector$Builder;
+
+    move-result-object v0
+
+    .line 97
+    invoke-virtual {v0}, Landroidx/compose/ui/graphics/vector/ImageVector$Builder;->build()Landroidx/compose/ui/graphics/vector/ImageVector;
+
+    move-result-object v0
+
+    .line 29
+    sput-object v0, Landroidx/compose/material/icons/outlined/AddRoadKt;->_addRoad:Landroidx/compose/ui/graphics/vector/ImageVector;
+
+    .line 81
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
+
+    return-object v0
+.end method
