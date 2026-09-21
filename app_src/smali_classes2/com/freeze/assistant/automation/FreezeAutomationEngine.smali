@@ -3937,6 +3937,13 @@
 
     .line 396
     :cond_3
+    invoke-direct {v0, v6, v8, v2}, Lcom/freeze/assistant/automation/FreezeAutomationEngine;->sendWhatsAppViaAccessibilityFallback(Ljava/lang/String;Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+
+    :cond_check_perm
     sget-object v3, Lcom/freeze/assistant/util/PermissionHelper;->INSTANCE:Lcom/freeze/assistant/util/PermissionHelper;
 
     iget-object v4, v0, Lcom/freeze/assistant/automation/FreezeAutomationEngine;->context:Landroid/content/Context;

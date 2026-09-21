@@ -873,7 +873,33 @@
 
     :cond_8
     :goto_2
+    invoke-virtual {p1}, Landroid/view/accessibility/AccessibilityNodeInfo;->isClickable()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_check_parent
+
     return-object p1
+
+    :cond_check_parent
+    invoke-virtual {p1}, Landroid/view/accessibility/AccessibilityNodeInfo;->getParent()Landroid/view/accessibility/AccessibilityNodeInfo;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_go_children
+
+    invoke-virtual {v1}, Landroid/view/accessibility/AccessibilityNodeInfo;->isClickable()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_go_children
+
+    return-object v1
+
+    :cond_go_children
+    const/4 v4, 0x0
+
+    goto :cond_5
 
     :cond_9
     :goto_3
@@ -1338,11 +1364,6 @@
     invoke-virtual {p1}, Landroid/view/accessibility/AccessibilityNodeInfo;->isEditable()Z
 
     move-result v1
-
-    if-eqz v1, :cond_1
-
-    return-object v0
-
     .line 554
     :cond_1
     invoke-virtual {p1}, Landroid/view/accessibility/AccessibilityNodeInfo;->getViewIdResourceName()Ljava/lang/String;
@@ -1372,101 +1393,41 @@
     :cond_3
     check-cast v1, Ljava/lang/CharSequence;
 
-    const-string v4, "search"
+    const-string v4, "contact_name"
 
-    move-object v5, v4
-
-    check-cast v5, Ljava/lang/CharSequence;
+    check-cast v4, Ljava/lang/CharSequence;
 
     const/4 v6, 0x0
 
     const/4 v7, 0x2
 
-    invoke-static {v1, v5, v6, v7, v0}, Lkotlin/text/StringsKt;->contains$default(Ljava/lang/CharSequence;Ljava/lang/CharSequence;ZILjava/lang/Object;)Z
+    invoke-static {v1, v4, v6, v7, v0}, Lkotlin/text/StringsKt;->contains$default(Ljava/lang/CharSequence;Ljava/lang/CharSequence;ZILjava/lang/Object;)Z
 
-    move-result v5
+    move-result v4
 
-    if-nez v5, :cond_4
+    if-nez v4, :cond_contact_cand
 
-    const-string/jumbo v5, "toolbar"
+    goto :cond_c
 
-    check-cast v5, Ljava/lang/CharSequence;
-
-    invoke-static {v1, v5, v6, v7, v0}, Lkotlin/text/StringsKt;->contains$default(Ljava/lang/CharSequence;Ljava/lang/CharSequence;ZILjava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_5
-
-    .line 556
-    :cond_4
-    invoke-virtual {p1}, Landroid/view/accessibility/AccessibilityNodeInfo;->getClassName()Ljava/lang/CharSequence;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_5
-
-    invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_5
-
-    check-cast v1, Ljava/lang/CharSequence;
-
-    const-string v5, "EditText"
-
-    check-cast v5, Ljava/lang/CharSequence;
-
-    invoke-static {v1, v5, v6, v7, v0}, Lkotlin/text/StringsKt;->contains$default(Ljava/lang/CharSequence;Ljava/lang/CharSequence;ZILjava/lang/Object;)Z
-
-    move-result v1
-
-    const/4 v5, 0x1
-
-    if-ne v1, v5, :cond_5
-
-    return-object v0
-
-    .line 559
-    :cond_5
+    :cond_contact_cand
     invoke-virtual {p1}, Landroid/view/accessibility/AccessibilityNodeInfo;->getText()Ljava/lang/CharSequence;
 
     move-result-object v1
 
-    if-eqz v1, :cond_6
+    if-eqz v1, :cond_c
 
     invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object v1
 
-    if-nez v1, :cond_7
+    if-nez v1, :cond_has_text
 
-    :cond_6
-    move-object v1, v3
+    goto :cond_c
 
-    .line 560
-    :cond_7
-    invoke-virtual {p1}, Landroid/view/accessibility/AccessibilityNodeInfo;->getContentDescription()Ljava/lang/CharSequence;
+    :cond_has_text
+    sget-object v4, Ljava/util/Locale;->ROOT:Ljava/util/Locale;
 
-    move-result-object v5
-
-    if-eqz v5, :cond_8
-
-    invoke-virtual {v5}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object v5
-
-    if-nez v5, :cond_9
-
-    :cond_8
-    move-object v5, v3
-
-    .line 562
-    :cond_9
-    sget-object v8, Ljava/util/Locale;->ROOT:Ljava/util/Locale;
-
-    invoke-virtual {p2, v8}, Ljava/lang/String;->toLowerCase(Ljava/util/Locale;)Ljava/lang/String;
+    invoke-virtual {p2, v4}, Ljava/lang/String;->toLowerCase(Ljava/util/Locale;)Ljava/lang/String;
 
     move-result-object v8
 
@@ -1484,10 +1445,9 @@
 
     move-result-object v8
 
-    .line 563
-    sget-object v9, Ljava/util/Locale;->ROOT:Ljava/util/Locale;
+    sget-object v4, Ljava/util/Locale;->ROOT:Ljava/util/Locale;
 
-    invoke-virtual {v1, v9}, Ljava/lang/String;->toLowerCase(Ljava/util/Locale;)Ljava/lang/String;
+    invoke-virtual {v1, v4}, Ljava/lang/String;->toLowerCase(Ljava/util/Locale;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -1503,42 +1463,6 @@
 
     move-result-object v1
 
-    .line 564
-    sget-object v9, Ljava/util/Locale;->ROOT:Ljava/util/Locale;
-
-    invoke-virtual {v5, v9}, Ljava/lang/String;->toLowerCase(Ljava/util/Locale;)Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-static {v5, v2}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
-
-    check-cast v5, Ljava/lang/CharSequence;
-
-    new-instance v2, Lkotlin/text/Regex;
-
-    invoke-direct {v2, v10}, Lkotlin/text/Regex;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v2, v5, v3}, Lkotlin/text/Regex;->replace(Ljava/lang/CharSequence;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    .line 566
-    new-instance v3, Landroid/graphics/Rect;
-
-    invoke-direct {v3}, Landroid/graphics/Rect;-><init>()V
-
-    .line 567
-    invoke-virtual {p1, v3}, Landroid/view/accessibility/AccessibilityNodeInfo;->getBoundsInScreen(Landroid/graphics/Rect;)V
-
-    .line 570
-    invoke-virtual {v3}, Landroid/graphics/Rect;->centerY()I
-
-    move-result v3
-
-    const/16 v5, 0xfa
-
-    if-le v3, v5, :cond_c
-
     check-cast v8, Ljava/lang/CharSequence;
 
     invoke-interface {v8}, Ljava/lang/CharSequence;->length()I
@@ -1547,68 +1471,38 @@
 
     if-lez v3, :cond_c
 
-    .line 571
     check-cast v1, Ljava/lang/CharSequence;
 
     invoke-interface {v1}, Ljava/lang/CharSequence;->length()I
 
     move-result v3
 
-    if-lez v3, :cond_a
+    if-lez v3, :cond_c
 
     invoke-static {v1, v8, v6, v7, v0}, Lkotlin/text/StringsKt;->contains$default(Ljava/lang/CharSequence;Ljava/lang/CharSequence;ZILjava/lang/Object;)Z
 
     move-result v3
 
-    if-nez v3, :cond_b
+    if-eqz v3, :cond_rev_check
+
+    return-object p1
+
+    :cond_rev_check
+    check-cast v1, Ljava/lang/CharSequence;
+
+    invoke-interface {v1}, Ljava/lang/CharSequence;->length()I
+
+    move-result v3
+
+    const/4 v4, 0x3
+
+    if-lt v3, v4, :cond_c
 
     invoke-static {v8, v1, v6, v7, v0}, Lkotlin/text/StringsKt;->contains$default(Ljava/lang/CharSequence;Ljava/lang/CharSequence;ZILjava/lang/Object;)Z
 
     move-result v3
 
-    if-nez v3, :cond_b
-
-    .line 572
-    :cond_a
-    check-cast v2, Ljava/lang/CharSequence;
-
-    invoke-interface {v2}, Ljava/lang/CharSequence;->length()I
-
-    move-result v3
-
-    if-lez v3, :cond_c
-
-    invoke-static {v2, v8, v6, v7, v0}, Lkotlin/text/StringsKt;->contains$default(Ljava/lang/CharSequence;Ljava/lang/CharSequence;ZILjava/lang/Object;)Z
-
-    move-result v3
-
-    if-nez v3, :cond_b
-
-    invoke-static {v8, v2, v6, v7, v0}, Lkotlin/text/StringsKt;->contains$default(Ljava/lang/CharSequence;Ljava/lang/CharSequence;ZILjava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_c
-
-    .line 573
-    :cond_b
-    const-string v2, "askmetaai"
-
-    check-cast v2, Ljava/lang/CharSequence;
-
-    invoke-static {v1, v2, v6, v7, v0}, Lkotlin/text/StringsKt;->contains$default(Ljava/lang/CharSequence;Ljava/lang/CharSequence;ZILjava/lang/Object;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_c
-
-    check-cast v4, Ljava/lang/CharSequence;
-
-    invoke-static {v1, v4, v6, v7, v0}, Lkotlin/text/StringsKt;->contains$default(Ljava/lang/CharSequence;Ljava/lang/CharSequence;ZILjava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_c
+    if-eqz v3, :cond_c
 
     return-object p1
 

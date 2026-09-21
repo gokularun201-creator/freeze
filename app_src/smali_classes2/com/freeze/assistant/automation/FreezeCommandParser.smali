@@ -3213,7 +3213,7 @@
     .line 237
     new-instance v10, Lkotlin/text/Regex;
 
-    const-string v11, "^(?:send\\s+)?(?:a\\s+)?whatsapp(?:\\s+message)?\\s+to\\s+([a-zA-Z0-9_]+)\\s+[\"\'\u201c]?(.+?)[\"\'\u201d]?$"
+    const-string v11, "^(?:send\\s+)?(?:a\\s+)?whatsapp(?:\\s+message)?\\s+to\\s+([a-zA-Z0-9_]+(?:\\s+[a-zA-Z])?)\\s+[\"\'\u201c]?(.+?)[\"\'\u201d]?$"
 
     invoke-direct {v10, v11}, Lkotlin/text/Regex;-><init>(Ljava/lang/String;)V
 
@@ -3222,7 +3222,7 @@
     .line 238
     new-instance v10, Lkotlin/text/Regex;
 
-    const-string v11, "^(?:send\\s+)?(?:a\\s+)?whatsapp(?:\\s+message)?\\s+([a-zA-Z0-9_]+)\\s+[\"\'\u201c]?(.+?)[\"\'\u201d]?$"
+    const-string v11, "^(?:send\\s+)?(?:a\\s+)?whatsapp(?:\\s+message)?\\s+([a-zA-Z0-9_]+(?:\\s+[a-zA-Z])?)\\s+[\"\'\u201c]?(.+?)[\"\'\u201d]?$"
 
     invoke-direct {v10, v11}, Lkotlin/text/Regex;-><init>(Ljava/lang/String;)V
 
