@@ -388,6 +388,14 @@
     return-object p0
 .end method
 
+.method public static final synthetic access$getContext$p(Lcom/freeze/assistant/voice/FreezeVoiceManager;)Landroid/content/Context;
+    .locals 0
+
+    iget-object p0, p0, Lcom/freeze/assistant/voice/FreezeVoiceManager;->context:Landroid/content/Context;
+
+    return-object p0
+.end method
+
 .method public static final synthetic access$getOnCommandRecognized$p(Lcom/freeze/assistant/voice/FreezeVoiceManager;)Lkotlin/jvm/functions/Function1;
     .locals 0
 

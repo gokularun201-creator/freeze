@@ -1094,9 +1094,28 @@
 .end method
 
 .method static final checkWakeWord$lambda$5(Lcom/freeze/assistant/voice/VoskWakeWordDetector;Ljava/lang/String;)V
-    .locals 0
+    .locals 2
 
     .line 443
+    iget-object v0, p0, Lcom/freeze/assistant/voice/VoskWakeWordDetector;->context:Landroid/content/Context;
+
+    invoke-static {v0}, Lcom/freeze/assistant/voice/FreezeSpeakerVerifier;->verifyLatestSpeech(Landroid/content/Context;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_direct_ok
+
+    const-string v0, "VoskWakeWordDetector"
+
+    const-string/jumbo v1, "\u26d4 DIRECT COMMAND BLOCKED: Speaker verification failed (not owner voice)."
+
+    invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    invoke-virtual {p0}, Lcom/freeze/assistant/voice/VoskWakeWordDetector;->startListening()V
+
+    return-void
+
+    :cond_direct_ok
     iget-object p0, p0, Lcom/freeze/assistant/voice/VoskWakeWordDetector;->onDirectCommandDetected:Lkotlin/jvm/functions/Function1;
 
     if-eqz p0, :cond_0
@@ -1108,9 +1127,28 @@
 .end method
 
 .method static final checkWakeWord$lambda$6(Lcom/freeze/assistant/voice/VoskWakeWordDetector;)V
-    .locals 0
+    .locals 2
 
     .line 469
+    iget-object v0, p0, Lcom/freeze/assistant/voice/VoskWakeWordDetector;->context:Landroid/content/Context;
+
+    invoke-static {v0}, Lcom/freeze/assistant/voice/FreezeSpeakerVerifier;->verifyLatestSpeech(Landroid/content/Context;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_wake_ok
+
+    const-string v0, "VoskWakeWordDetector"
+
+    const-string/jumbo v1, "\u26d4 WAKE WORD BLOCKED: Speaker verification failed (not owner voice)."
+
+    invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    invoke-virtual {p0}, Lcom/freeze/assistant/voice/VoskWakeWordDetector;->startListening()V
+
+    return-void
+
+    :cond_wake_ok
     iget-object p0, p0, Lcom/freeze/assistant/voice/VoskWakeWordDetector;->onWakeWordDetected:Lkotlin/jvm/functions/Function0;
 
     invoke-interface {p0}, Lkotlin/jvm/functions/Function0;->invoke()Ljava/lang/Object;

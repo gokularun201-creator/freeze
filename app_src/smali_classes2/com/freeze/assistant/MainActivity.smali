@@ -4355,6 +4355,8 @@
     .line 95
     invoke-super {p0, p1}, Landroidx/activity/ComponentActivity;->onCreate(Landroid/os/Bundle;)V
 
+    invoke-static {p0}, Lcom/freeze/assistant/voice/FreezeSpeakerVerifier;->registerReceiver(Landroid/app/Activity;)V
+
     .line 97
     move-object p1, p0
 
@@ -4382,7 +4384,7 @@
 .end method
 
 .method protected onResume()V
-    .locals 0
+    .locals 3
 
     .line 310
     invoke-super {p0}, Landroidx/activity/ComponentActivity;->onResume()V
@@ -4390,5 +4392,49 @@
     .line 311
     invoke-direct {p0}, Lcom/freeze/assistant/MainActivity;->refreshPermissions()V
 
+    invoke-virtual {p0}, Lcom/freeze/assistant/MainActivity;->getIntent()Landroid/content/Intent;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_skip_enroll_intent
+
+    const-string v1, "enroll_voice"
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_check_action
+
+    const-string v1, "enroll_voice"
+
+    invoke-virtual {v0, v1}, Landroid/content/Intent;->removeExtra(Ljava/lang/String;)V
+
+    invoke-static {p0}, Lcom/freeze/assistant/voice/FreezeSpeakerVerifier;->showEnrollmentDialog(Landroid/app/Activity;)V
+
+    return-void
+
+    :cond_check_action
+    invoke-virtual {v0}, Landroid/content/Intent;->getAction()Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, "com.freeze.assistant.ENROLL_VOICE"
+
+    invoke-static {v1, v2}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_skip_enroll_intent
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
+
+    invoke-static {p0}, Lcom/freeze/assistant/voice/FreezeSpeakerVerifier;->showEnrollmentDialog(Landroid/app/Activity;)V
+
+    :cond_skip_enroll_intent
     return-void
 .end method

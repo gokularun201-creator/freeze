@@ -258,6 +258,12 @@
 
     move-result v2
 
+    if-lez v2, :cond_sv_read
+
+    invoke-static {v1, v2}, Lcom/freeze/assistant/voice/FreezeSpeakerVerifier;->onAudioFrame([SI)V
+
+    :cond_sv_read
+
     .line 219
     iget-boolean v5, p0, Lorg/vosk/android/SpeechService$RecognizerThread;->paused:Z
 

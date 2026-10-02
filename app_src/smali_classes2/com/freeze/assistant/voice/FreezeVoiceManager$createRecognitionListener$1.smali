@@ -206,6 +206,8 @@
 .method public onBufferReceived([B)V
     .locals 0
 
+    invoke-static {p1}, Lcom/freeze/assistant/voice/FreezeSpeakerVerifier;->onAudioBytes([B)V
+
     return-void
 .end method
 
@@ -674,6 +676,39 @@
     invoke-interface {p1, v1}, Lkotlinx/coroutines/flow/MutableStateFlow;->setValue(Ljava/lang/Object;)V
 
     .line 382
+    iget-object p1, p0, Lcom/freeze/assistant/voice/FreezeVoiceManager$createRecognitionListener$1;->this$0:Lcom/freeze/assistant/voice/FreezeVoiceManager;
+
+    invoke-static {p1}, Lcom/freeze/assistant/voice/FreezeVoiceManager;->access$getContext$p(Lcom/freeze/assistant/voice/FreezeVoiceManager;)Landroid/content/Context;
+
+    move-result-object p1
+
+    invoke-static {p1}, Lcom/freeze/assistant/voice/FreezeSpeakerVerifier;->verifyLatestSpeech(Landroid/content/Context;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_speaker_verified
+
+    const-string p1, "FreezeVoiceManager"
+
+    const-string/jumbo v0, "\u26d4 Speech command blocked - stranger voice detected!"
+
+    invoke-static {p1, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    iget-object p1, p0, Lcom/freeze/assistant/voice/FreezeVoiceManager$createRecognitionListener$1;->this$0:Lcom/freeze/assistant/voice/FreezeVoiceManager;
+
+    const-string v0, "Voice not recognized. Only owner authorized."
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p1, v0, v1}, Lcom/freeze/assistant/voice/FreezeVoiceManager;->speak(Ljava/lang/String;Lkotlin/jvm/functions/Function0;)V
+
+    iget-object p0, p0, Lcom/freeze/assistant/voice/FreezeVoiceManager$createRecognitionListener$1;->this$0:Lcom/freeze/assistant/voice/FreezeVoiceManager;
+
+    invoke-virtual {p0}, Lcom/freeze/assistant/voice/FreezeVoiceManager;->startContinuousWakeWordListening()V
+
+    return-void
+
+    :cond_speaker_verified
     iget-object p0, p0, Lcom/freeze/assistant/voice/FreezeVoiceManager$createRecognitionListener$1;->this$0:Lcom/freeze/assistant/voice/FreezeVoiceManager;
 
     invoke-static {p0}, Lcom/freeze/assistant/voice/FreezeVoiceManager;->access$getOnCommandRecognized$p(Lcom/freeze/assistant/voice/FreezeVoiceManager;)Lkotlin/jvm/functions/Function1;

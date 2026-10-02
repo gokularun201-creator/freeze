@@ -6765,6 +6765,74 @@
 
     invoke-virtual {v0, v4}, Lcom/freeze/assistant/automation/FreezeAutomationEngine;->logAction(Ljava/lang/String;)V
 
+    sget-object v4, Ljava/util/Locale;->ROOT:Ljava/util/Locale;
+
+    invoke-virtual {v1, v4}, Ljava/lang/String;->toLowerCase(Ljava/util/Locale;)Ljava/lang/String;
+
+    move-result-object v4
+
+    const-string v8, "enroll voice"
+
+    invoke-virtual {v4, v8}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result v8
+
+    if-nez v8, :cond_do_enroll
+
+    const-string v8, "calibrate voice"
+
+    invoke-virtual {v4, v8}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result v8
+
+    if-nez v8, :cond_do_enroll
+
+    const-string v8, "voice setup"
+
+    invoke-virtual {v4, v8}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result v8
+
+    if-nez v8, :cond_do_enroll
+
+    const-string v8, "voice profile"
+
+    invoke-virtual {v4, v8}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_skip_voice_enroll
+
+    :cond_do_enroll
+    new-instance v4, Landroid/content/Intent;
+
+    const-string v8, "com.freeze.assistant.ENROLL_VOICE"
+
+    invoke-direct {v4, v8}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+
+    iget-object v8, v0, Lcom/freeze/assistant/automation/FreezeAutomationEngine;->context:Landroid/content/Context;
+
+    invoke-virtual {v8, v4}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
+
+    new-instance v9, Lcom/freeze/assistant/automation/ActionResult;
+
+    const/4 v10, 0x1
+
+    const-string v11, "Opening Voice Biometrics setup. Please follow the calibration steps on your screen."
+
+    const/4 v12, 0x0
+
+    const/4 v13, 0x0
+
+    const/16 v14, 0xc
+
+    const/4 v15, 0x0
+
+    invoke-direct/range {v9 .. v15}, Lcom/freeze/assistant/automation/ActionResult;-><init>(ZLjava/lang/String;Ljava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
+
+    return-object v9
+
+    :cond_skip_voice_enroll
     .line 72
     iget-object v4, v0, Lcom/freeze/assistant/automation/FreezeAutomationEngine;->pendingDisambiguation:Lcom/freeze/assistant/automation/FreezeAutomationEngine$ContactDisambiguationState;
 

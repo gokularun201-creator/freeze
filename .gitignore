@@ -26,3 +26,10 @@ Thumbs.db
 Desktop.ini
 .DS_Store
 
+# Tools and decompiler caches
+jadx_tool/
+jadx.zip
+dummy_dir/
+*.zip
+source_code/
+

@@ -1,0 +1,20 @@
+version: 2.10.0
+apkFileName: dummy.apk
+isFrameworkApk: false
+usesFramework:
+  ids:
+  tag: null
+sdkInfo:
+  minSdkVersion: 23
+packageInfo:
+  forcedPackageId: null
+  renameManifestPackage: null
+versionInfo:
+  versionCode: null
+  versionName: null
+resourcesAreCompressed: false
+sharedLibrary: false
+sparseResources: false
+doNotCompress:
+- classes.dex
+- AndroidManifest.xml
